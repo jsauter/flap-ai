@@ -42,7 +42,7 @@ class Player:
             self.vel = 0
 
     def bird_flap(self):
-        if not self.flap or not self.sky_collision():
+        if not self.flap and not self.sky_collision():
             self.flap = True
             self.vel = -5
         if self.vel >= 3:
